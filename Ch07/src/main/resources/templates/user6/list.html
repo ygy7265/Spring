@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+			<tr>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>생일</th>
+				<th>성별</th>
+				<th>주소</th>
+				<th>나이</th>
+				<th>휴대폰</th>
+				<th colspan="2">관리</th>
+			</tr>
+			<tr th:each="user6:${list}">
+				<th th:text="${user6.uid}">아이디</th>
+				<th th:text="${user6.name}">이름</th>
+				<th th:text="${user6.birth}">생일</th>
+				<th th:text="${user6.gender}">성별</th>
+				<th th:text="${user6.addr}">주소</th>
+				<th th:text="${user6.age}">나이</th>
+				<th th:text="${user6.hp}">휴대폰</th>
+				<th>
+					<a th:href="@{/user6/modify(uid=${user6.uid})}">수정</a>
+					<a th:href="@{/user6/delete(uid=${user6.uid})}">삭제</a>
+
+				</th>
+			</tr>
+		</table>		
+</body>
+</html>

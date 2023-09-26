@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch07::index</title>
+	</head>
+	<body>
+		<h3>Ch07.Spring Boot 실습</h3>
+		
+		
+		<h4>Thymeleaf 기본출력</h4>
+		<p>str1 : [[${str1}]]</p>
+		<p th:text="${user1}">2</p>
+		
+		<h4>Thymeleaf 조건문</h4>
+		
+		<p>
+			<span th:if="${user1.name =='홍길동'}">user1은 홍길동 입니다.</span>
+			<span th:if="${user1.name =='김춘추'}">user1은 김춘추 입니다.</span>
+		</p>
+		
+		<p>
+			<span th:if="${user2}">user2는 참</span>
+			<span th:unless="${user2}">user2는 거짓</span>
+		</p>
+		<p>
+			<span th:if="${user3}">user3는 널아님</span>
+			<span th:unless="${user3}">user3는 널임</span>
+		</p>
+		
+		<p th:switch="${user4.age >= 30}">
+			<span th:case=true>30세이상</span>
+			<span th:case=false>30세이하</span>
+			
+		</p>
+		
+		<h4>Thymeleaf 반복문</h4>
+		
+		<table border="1">
+			<tr>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>휴대폰</th>
+				<th>나이</th>
+			</tr>
+			<tr th:each="user1:${list}">
+				<th th:text="${user1.uid}">아이디</th>
+				<th th:text="${user1.name}">이름</th>
+				<th th:text="${user1.hp}">휴대폰</th>
+				<th th:text="${user1.age}">나이</th>
+
+			</tr>
+			
+		</table>		
+		<h4>Thymeleaf 링크</h4>		
+		
+		<a th:href="@{/include}">include</a>
+		<a th:href="@{/layout}">layout</a>
+	</body>
+</html>

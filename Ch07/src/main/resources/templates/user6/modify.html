@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="/Ch07/user6/modify" method="POST">
+		<table border="1">
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="uid" th:value="${dto.uid}"/></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name" th:value="${dto.name}"/></td>
+			</tr>
+			<tr>
+				<td>생년월일</td>
+				<td><input type="text" name="birth" th:value="${dto.birth}"/></td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td><input type="text" name="gender" th:value="${dto.gender}"/></td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" name="addr" th:value="${dto.addr}"/></td>
+			</tr>
+			<tr>
+				<td>나이</td>
+				<td><input type="text" name="age" th:value="${dto.age}"/></td>
+			</tr>
+			<tr>
+				<td>휴대폰</td>
+				<td><input type="text" name="hp" th:value="${dto.hp}"/></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="right"><input type="submit" value="등록하기"/></td>
+			</tr>
+		</table>
+		</form>
+</body>
+</html>
