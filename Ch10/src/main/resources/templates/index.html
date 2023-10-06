@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ch10 :: Index</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script th:src="@{/js/user1.js}"></script>
+		<script th:src="@{/js/user2.js}"></script>
+		
+		
+	</head>
+	<body>
+		<h3>index page</h3>
+		<!--
+			
+			GET : /user1
+			GET : /user1/{id}
+			POST : /user1
+			PUT : /user1
+			DELETE : /user1/{id}
+			
+		-->
+		<h4>User1</h4>
+		<button id="user1BtnList">User1 List</button>
+		<button id="user1BtnSelect">User1 Select</button>
+		<button id="user1BtnRegister">User1 Register</button>
+		<button id="user1BtnUpdate">User1 Update</button>
+		<button id="user1BtnDelete">User1 Delete</button>
+
+
+		<h4>User2</h4>
+		<button id="user2BtnList">User2 List</button>
+		<button id="user2BtnSelect">User2 Select</button>
+		<button id="user2BtnRegister">User2 Register</button>
+		<button id="user2BtnUpdate">User2 Update</button>
+		<button id="user2BtnDelete">User2 Delete</button>
+	</body>
+</html>
