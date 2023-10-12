@@ -1,4 +1,4 @@
-package kr.ch11.security;
+package kr.ch12.security;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import kr.ch11.entity.UserEntity;
+import kr.ch12.entity.UserEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
